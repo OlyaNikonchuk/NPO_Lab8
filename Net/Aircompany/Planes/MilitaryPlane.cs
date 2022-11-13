@@ -6,8 +6,8 @@ namespace Aircompany.Planes
     {
         public MilitaryType Type;
 
-        public MilitaryPlane(string model, int maxSpeed, int maxFlightDistance, int maxLoadCapacity, MilitaryType type)
-            : base(model, maxSpeed, maxFlightDistance, maxLoadCapacity)
+        public MilitaryPlane(string model, int maxSpeed, int maxFlightDistance, int MaxLoadCapacity, MilitaryType type)
+            : base(model, maxSpeed, maxFlightDistance, MaxLoadCapacity)
         {
             Type = type;
         }

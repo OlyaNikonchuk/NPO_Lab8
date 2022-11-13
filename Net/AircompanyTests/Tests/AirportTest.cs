@@ -30,7 +30,7 @@ namespace AircompanyTests.Tests
         private PassengerPlane planeWithMaxPassengerCapacity = new PassengerPlane("Boeing-747", 980, 16100, 70500, 242);
 
         [Test]
-        public void MyTest1()
+        public void MilitaryTransport()
         {
             Airport airport = new Airport(planes);
             List<MilitaryPlane> transportMilitaryPlanes = airport.GetTransportMilitaryPlanes().ToList();
@@ -46,14 +46,14 @@ namespace AircompanyTests.Tests
         }
 
         [Test]
-        public void MyTest2()
+        public void MaxPassengersCapacity()
         {
             Airport airport = new Airport(planes);
             PassengerPlane expectedPlaneWithMaxPassengersCapacity = airport.GetPassengerPlaneWithMaxPassengersCapacity();           
         }
 
         [Test]
-        public void MyTest3()
+        public void SortByMaxLoad()
         {
             Airport airport = new Airport(planes);
             airport = airport.SortByMaxLoadCapacity();
@@ -64,7 +64,7 @@ namespace AircompanyTests.Tests
             {
                 Plane currentPlane = planesSortedByMaxLoadCapacity[i];
                 Plane nextPlane = planesSortedByMaxLoadCapacity[i + 1];
-                if (currentPlane.MAXLoadCapacity() > nextPlane.MAXLoadCapacity())
+                if (currentPlane.MaxLoadCapacity() > nextPlane.MaxLoadCapacity())
                 {
                     nextPlaneMaxLoadCapacityIsHigherThanCurrent = false;
                 }
